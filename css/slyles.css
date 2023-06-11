@@ -45,15 +45,40 @@ body {
   background-color: var(--background-color);
 }
 
-.container {
+/*.container {
   width: 1158px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}*/
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
 }
 
 /*  ====== BODY ====== */
-
+/*
 .page-nav :hover,
 .page-nav :focus {
   color: var(--accent-color);
@@ -68,12 +93,35 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-color-text);
   background-color: var(--background-color);
-}
+}*/
 /*  ====== /BODY ====== */
 
 /* ======= HEADER ======== */
 
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-mail-phone {
+    display: none;
+  }
+}
+
 .page-header {
+  padding-top: 24px;
+  padding-bottom: 22px;
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*.page-header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -119,11 +167,11 @@ body {
 .menu-address {
   display: flex;
   gap: 40px;
-}
+} */
 
 /*===== LOGO ===== */
 
-.logo {
+/*.logo {
   margin-right: 76px;
 }
 
@@ -144,11 +192,11 @@ body {
 }
 .logo-two {
   color: #f4f4fd;
-}
+}*/
 
 /*=====  / LOGO ===== */
 
-.menu-link {
+/*.menu-link {
   position: relative;
   font-family: var(--primary-font);
   font-weight: 500;
@@ -159,7 +207,7 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+ 
 }
 .menu-link-studio {
   color: #404bbf;
@@ -189,9 +237,38 @@ body {
   color: var(--primary-color-text);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+}*/
 
 /* ======= / HEADER ======== */
+
+/* ==== MOBILE MENU ====== */
+
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+}
+
+.mobile-menu-container {
+  position: relative;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+/* ==== /MOBILE MENU ====== */
 
 /* ====== HERO ======*/
 
