@@ -78,7 +78,7 @@ body {
 
 @media screen and (min-width: 428px) {
   .container {
-    max-width: 426px;
+    width: 428px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -349,11 +349,7 @@ body {
 /* ======= / HEADER ======== */
 
 /* ==== MOBILE MENU ====== */
-@media screen and (max-width: 427px) {
-  .mobile-menu-phone {
-    font-size: 8vh;
-  }
-}
+
 .mobile-menu {
   position: fixed;
   width: 100%;
@@ -379,9 +375,7 @@ body {
   padding-top: 80px;
   padding-left: 40px;
   padding-bottom: 40px;
-
   max-width: 428px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -465,7 +459,7 @@ body {
 }
 
 .mobile-menu-phone {
-  width: 353px;
+  max-width: 353px;
   height: 40px;
   font-family: "Roboto";
   font-weight: 700;
@@ -495,7 +489,9 @@ body {
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  gap: 56px;
+
+  max-width: 328px;
+  justify-content: space-between;
 }
 
 .mobile-social-list-link {
@@ -532,6 +528,11 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 410px) {
+  .mobile-menu-phone {
+    font-size: 25px;
+  }
+}
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
@@ -722,6 +723,22 @@ body {
 }
 
 @media screen and (min-width: 1158px) {
+  .hero {
+    margin: 0% auto;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-dark-bg.jpg);
+    background-size: cover;
+    background-color: #2e2f42;
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
     screen and (min-resolution: 129dpi) and (min-width: 768px),
     screen and (min-resolution: 2dppx) and (min-width: 768px) {
@@ -1035,11 +1052,6 @@ body {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-}
-
-.personal-social-media > .icon-link:hover,
-.personal-social-media > .icon-link:focus {
-  background-color: var(--hover-color);
 }
 
 .icon-img {
