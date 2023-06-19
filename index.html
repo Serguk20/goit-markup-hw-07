@@ -65,73 +65,92 @@
       </div>
       <div class="mobile-menu js-menu-container">
         <div class="container mobile-menu-container">
-          <button type="button" class="mobile-menu-close-btn js-close-menu">
-            <svg class="mobile-menu-close-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-icon-modal-close"></use>
-            </svg>
-          </button>
+          <div>
+            <button type="button" class="mobile-menu-close-btn js-close-menu">
+              <svg class="mobile-menu-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-icon-modal-close"></use>
+              </svg>
+            </button>
 
-          <ul class="mobile-menu-list list">
-            <li class="mobile-menu-item">
-              <a
-                class="mobile-menu-link menu-link-studio link"
-                href="./index.html"
-                >Studio</a
-              >
-            </li>
-            <li class="mobile-menu-item">
-              <a class="mobile-menu-link link" href="./portfolio.html"
-                >Portfolio</a
-              >
-            </li>
-            <li class="mobile-menu-item">
-              <a class="mobile-menu-link link" href="">Contacts</a>
-            </li>
-          </ul>
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu-item">
+                <a
+                  class="mobile-menu-link menu-link-studio link"
+                  href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link link" href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu-contact-fix">
+            <ul class="mobile-menu-contact-list list">
+              <li>
+                <a href="tel:+110001111111" class="mobile-menu-phone"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mobile-menu-mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
 
-          <ul class="mobile-menu-contact-list list">
-            <li>
-              <a href="tel:+110001111111" class="mobile-menu-phone"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-            <li>
-              <a href="mailto:info@devstudio.com" class="mobile-menu-mail"
-                >info@devstudio.com</a
-              >
-            </li>
-          </ul>
-
-          <ul class="mobile-social-list list">
-            <li class="mobile-social-list-item">
-              <a href="" class="mobile-social-list-link">
-                <svg class="mobile-social-list-icon" width="40px" height="40px">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="mobile-social-list-item">
-              <a href="" class="mobile-social-list-link">
-                <svg class="mobile-social-list-icon" width="40px" height="40px">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="mobile-social-list-item">
-              <a href="" class="mobile-social-list-link">
-                <svg class="mobile-social-list-icon" width="40px" height="40px">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="mobile-social-list-item">
-              <a href="" class="mobile-social-list-link">
-                <svg class="mobile-social-list-icon" width="40px" height="40px">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+            <ul class="mobile-social-list list">
+              <li class="mobile-social-list-item">
+                <a href="" class="mobile-social-list-link">
+                  <svg
+                    class="mobile-social-list-icon"
+                    width="40px"
+                    height="40px"
+                  >
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-list-item">
+                <a href="" class="mobile-social-list-link">
+                  <svg
+                    class="mobile-social-list-icon"
+                    width="40px"
+                    height="40px"
+                  >
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-list-item">
+                <a href="" class="mobile-social-list-link">
+                  <svg
+                    class="mobile-social-list-icon"
+                    width="40px"
+                    height="40px"
+                  >
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-list-item">
+                <a href="" class="mobile-social-list-link">
+                  <svg
+                    class="mobile-social-list-icon"
+                    width="40px"
+                    height="40px"
+                  >
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -213,28 +232,80 @@
           <h2 class="image-description">What are we doing</h2>
           <ul class="list image-container">
             <li class="image-ajustment">
-              <img
-                src="./images/img1.jpg"
-                alt="Computer"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/image/image1.webp  1x,
+                    ./images/image/image1x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/image/image1.jpeg  1x,
+                    ./images/image/image1x.jpeg 2x
+                  "
+                />
+
+                <img
+                  src="./images/img1.jpg"
+                  alt="Computer"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="image-ajustment">
-              <img
-                src="./images/img2.jpg"
-                alt="Four phones"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/image/image2.webp  1x,
+                    ./images/image/image2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/image/image2.jpeg  1x,
+                    ./images/image/image2x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./images/img2.jpg"
+                  alt="Four phones"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="image-ajustment">
-              <img
-                src="./images/img3.jpg"
-                alt="Hand phone computer"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/image/img3.webp  1x,
+                    ./images/image/img3x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/image/img3.jpeg  1x,
+                    ./images/image/img3x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./images/img3.jpg"
+                  alt="Hand phone computer"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -249,13 +320,50 @@
             <li class="team-cards-background">
               <picture>
                 <source
-                  srcset="./images/webp/mobile-img1.webp 1x"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/webp/desktop-img1.webp  1x,
+                    ./images/webp/desktop-img1x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 780px)"
+                  srcset="
+                    ./images/webp/tablet-img1.webp  1x,
+                    ./images/webp/tablet-img1x.webp 2x
+                  "
                   type="image/webp"
                 />
                 <source
+                  media="(max-width: 780px)"
                   srcset="
-                    ./images/team/people-1.jpg    1x,
-                    ./images/team/people-1@2x.jpg 2x
+                    ./images/webp/mobile-img1.webp  1x,
+                    ./images/webp/mobile-img1x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    /images/team-jpn-1/desktop-1.jpg  1x,
+                    /images/team-jpn-1/desktop-1x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team-jpn-1/tablet-img1.jpeg  1x,
+                    ./images/team-jpn-1/tablet-img1x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    ./images/team-jpn-1/mobile-img1.jpeg  1x,
+                    ./images/team-jpn-1/mobile-img1x.jpeg 2x
                   "
                 />
                 <img
@@ -328,12 +436,60 @@
               </div>
             </li>
             <li class="team-cards-background">
-              <img
-                src="./images/img5.jpg"
-                alt="Profile picture 2"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/webp/desktop-img2.webp  1x,
+                    ./images/webp/desktop-img2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 780px)"
+                  srcset="
+                    ./images/webp/tablet-img2.webp  1x,
+                    ./images/webp/tablet-img2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 780px)"
+                  srcset="
+                    ./images/webp/mobile-img2.webp  1x,
+                    ./images/webp/mobile-img2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-jpn-1/desktop-img2.jpeg  1x,
+                    ./images/team-jpn-1/desktop-img2x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 780px)"
+                  srcset="
+                    ./images/team-jpn-1/tablet-img2.jpeg  1x,
+                    ./images/team-jpn-1/tablet-img2x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 780px)"
+                  srcset="
+                    ./images/team-jpn-1/mobile-img2.jpeg  1x,
+                    ./images/team-jpn-1/mobile-img2x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./images/img5.jpg"
+                  alt="Profile picture 2"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="cards-info">
                 <h3
                   class="team-cards-container description-title card-name-title"
@@ -395,12 +551,60 @@
               </div>
             </li>
             <li class="team-cards-background">
-              <img
-                src="./images/img6.jpg"
-                alt="Profile picture 3"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="
+                    ./images/webp/desktop-img3.webp  1x,
+                    ./images/webp/desktop-img3x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 780px)"
+                  srcset="
+                    ./images/webp/tablet-img3.webp  1x,
+                    ./images/webp/tablet-img3x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 780px )"
+                  srcset="
+                    ./images/webp/mobile-img3.webp  1x,
+                    ./images/webp/mobile-img3x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="
+                    ./images/team-jpn-1/desktop-img3.jpeg  1x,
+                    ./images/team-jpn-1/desktop-img3x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 780px)"
+                  srcset="
+                    ./images/team-jpn-1/tablet-img3.jpeg  1x,
+                    ./images/team-jpn-1/tablet-img3x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 780px)"
+                  srcset="
+                    ./images/team-jpn-1/mobile-img3.jpeg  1x,
+                    ./images/team-jpn-1/mobile-img3x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./images/img6.jpg"
+                  alt="Profile picture 3"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="cards-info">
                 <h3
                   class="team-cards-container description-title card-name-title"
@@ -462,12 +666,60 @@
               </div>
             </li>
             <li class="team-cards-background">
-              <img
-                src="./images/img7.jpg"
-                alt="Profil picture 4"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px )"
+                  srcset="
+                    ./images/webp/desktop-img4.webp  1x,
+                    ./images/webp/desktop-img4x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 780px)"
+                  srcset="
+                    ./images/webp/tablet-img4.webp  1x,
+                    ./images/webp/tablet-img4x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 780px )"
+                  srcset="
+                    ./images/webp/mobile-img4.webp  1x,
+                    ./images/webp/mobile-img4x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team-jpn-1/desktop-img4.jpeg  1x,
+                    ./images/team-jpn-1/desktop-img4x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 780px )"
+                  srcset="
+                    ./images/team-jpn-1/tablet-img4.jpeg  1x,
+                    ./images/team-jpn-1/tablet-img4x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 780px)"
+                  srcset="
+                    ./images/team-jpn-1/mobile-img4.jpeg  1x,
+                    ./images/team-jpn-1/mobile-img4x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./images/img7.jpg"
+                  alt="Profil picture 4"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="cards-info">
                 <h3
                   class="team-cards-container description-title card-name-title"
