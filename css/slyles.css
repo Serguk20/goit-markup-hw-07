@@ -164,6 +164,10 @@ body {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
 
+  .page-header {
+    padding: 0;
+  }
+
   .menu-item {
     display: flex;
     flex-direction: row;
@@ -211,16 +215,21 @@ body {
   .logo-two {
     color: #f4f4fd;
   }
+}
 
+@media screen and (min-width: 768px) and (max-width: 1158px) {
   .contact-mail-phone {
     font-family: var(--primary-font);
-
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--primary-color-text);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-phone {
+    padding-bottom: 12px;
   }
 }
 
@@ -272,6 +281,16 @@ body {
   .menu-address {
     display: flex;
     gap: 40px;
+  }
+
+  .contact-mail-phone {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-color-text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -332,17 +351,6 @@ body {
 
   .menu-list {
     gap: 40px;
-  }
-
-  .contact-mail-phone {
-    font-family: var(--primary-font);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-color-text);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -577,8 +585,8 @@ body {
 @media screen and (max-width: 768px) {
   .hero {
     margin: 0% auto;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -600,6 +608,54 @@ body {
           rgba(46, 47, 66, 0.7)
         ),
         url(../images/mobile-dark-bg@2x.jpg);
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio: 1) and (min-width: 768px),
+    screen and (min-resolution: 96dpi) and (min-width: 768px),
+    screen and (min-resolution: 1dppx) and (min-width: 768px) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tablet-dark-bg.jpg);
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tablet-dark-bg@2x.jpg);
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio: 1) and (min-width: 1158px),
+    screen and (min-resolution: 96dpi) and (min-width: 1158px),
+    screen and (min-resolution: 1dppx) and (min-width: 1158px) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office.jpeg);
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+    screen and (min-resolution: 192dpi) and (min-width: 1158px),
+    screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office1@2x.jpg);
     }
   }
 
@@ -653,8 +709,8 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     margin: 0% auto;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -833,11 +889,6 @@ body {
 }
 
 @media screen and (max-width: 1157px) {
-  .description-container {
-    padding-right: 16px;
-    padding-left: 16px;
-  }
-
   .description-icon {
     display: none;
   }
@@ -1064,19 +1115,25 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .team-members-container {
+  /* .team-members-container {
     padding-left: 82px;
     padding-right: 82px;
-  }
+  }*/
 
   .team-cards-background:not(:last-child) {
     margin-bottom: 72px;
+  }
+
+  .team-cards-background {
+    max-width: 264px;
+    display: inline-block;
   }
 }
 
 @media screen and (min-width: 768px) {
   .team-list {
     display: flex;
+    justify-content: center;
   }
 
   .team-cards-background {
@@ -1087,14 +1144,18 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .team-list {
     flex-wrap: wrap;
-    column-gap: 24px;
+    column-gap: 72px;
     row-gap: 64px;
   }
 
+  .team-cards-background {
+    max-width: 264px;
+  }
+  /*
   .team-members-container {
     padding-left: 108px;
     padding-right: 108px;
-  }
+  }*/
 }
 
 @media screen and (min-width: 1158px) {
@@ -1192,9 +1253,12 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-  .customers-container {
+  /* .customers-container {
     padding-left: 108px;
     padding-right: 108px;
+  }*/
+  .customers-container {
+    max-width: 582px;
   }
 }
 
@@ -1356,9 +1420,10 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .page-footer-container {
+    max-width: 582px;
     flex-wrap: wrap;
-    padding-left: 108px;
-    padding-right: 164px;
+    /* padding-left: 108px;
+    padding-right: 164px;*/
   }
 
   .footer-social-media-wrapper {
@@ -1539,6 +1604,7 @@ body {
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: scroll;
 }
 
 .backdrop.is-hidden {
@@ -1615,6 +1681,10 @@ body {
   .modal {
     max-width: 392px;
     width: 100%;
+  }
+  .modal {
+    top: 50px;
+    transform: translate(-50%);
   }
 }
 
